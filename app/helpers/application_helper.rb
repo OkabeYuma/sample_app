@@ -9,4 +9,19 @@ module ApplicationHelper
         end
     end
     
+    def bootstrap_class_for(flash_type)
+        case flash_type
+            when :sucsess
+                "alert-sucsess"
+            when :error
+                "alert-dainger"
+            when :arelt
+                "alert-waite"
+            when :notce
+                "alert-info"
+            else
+                flash_type.to_s
+        end
+    end
+    
 end
